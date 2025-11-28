@@ -1,6 +1,6 @@
 name: File operations 
 
-on: push
+on: workflow_dispatch
 
 jobs:
   files:
