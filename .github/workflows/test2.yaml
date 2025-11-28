@@ -1,14 +1,16 @@
-name:Testing workflow
+name: System Info
 
-on: push
+on: [push]
 
 jobs:
-    test-job:
-        runs-on: ubuntu-latest
+  info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print hostname
+        run: hostname
 
-        steps:
-            -name: Hello display
-             run: echo"Hello-KK FUNDA"
+      - name: Kernel info
+        run: uname -r
 
-             -name: Display the date
-              run: date
+      - name: Show OS info
+        run: cat /etc/os-release
