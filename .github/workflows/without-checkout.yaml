@@ -15,6 +15,9 @@ jobs:
       - name: Display the date
         run: date
 
+      - name: changing the permission
+        run: chmod +x uptime.sh
+
       - name: execute the shell script
         run: ./uptime.sh
      
