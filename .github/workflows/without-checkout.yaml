@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v5
 
       - name: Display the content of the file
-        run: cat devops4.txt
+        run: cat devops.txt
 
       - name: Display the date
         run: date
