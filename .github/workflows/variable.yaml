@@ -1,19 +1,21 @@
-name: Job Level Env Example
+name: Workflow Level Env Example
 
 on:
   workflow_dispatch:
 
+env:
+  BRAND: KKFUNDA
+  PLATFORM: GitHub
+
 jobs:
-  example:
+  job1:
     runs-on: ubuntu-latest
-
-    env:
-      COMPANY: KKFUNDA
-      COUNTRY: INDIA
-
     steps:
-      - name: Step one
-        run: echo "Company is $COMPANY"
+      - name: Step in job1
+        run: echo "Brand is $BRAND"
 
-      - name: Step two
-        run: echo "Country is $COUNTRY"
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step in job2
+        run: echo "Platform is $PLATFORM"
