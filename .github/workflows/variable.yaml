@@ -1,20 +1,19 @@
-name: Step Level Env Example
+name: Job Level Env Example
 
 on:
   workflow_dispatch:
 
 jobs:
-  demo:
+  example:
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Step level example
-        env:
-          CITY: Hyderabad
-          TRAINER: Prashanth
-        run: |
-          echo "City is $CITY"
-          echo "Trainer is $TRAINER"
+    env:
+      COMPANY: KKFUNDA
+      COUNTRY: INDIA
 
-      - name: Next step
-        run: echo "City is $CITY and Trainer is $TRAINER"
+    steps:
+      - name: Step one
+        run: echo "Company is $COMPANY"
+
+      - name: Step two
+        run: echo "Country is $COUNTRY"
