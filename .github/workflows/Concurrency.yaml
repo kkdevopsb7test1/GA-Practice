@@ -5,7 +5,7 @@ on:
 
 concurrency:
   group: main-branch-group
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   demo:
