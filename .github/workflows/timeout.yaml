@@ -6,6 +6,7 @@ on:
 jobs:
   sample:
     runs-on: ubuntu-latest
+    timeout-minutes: 1
     
 
     steps:
@@ -13,7 +14,7 @@ jobs:
         run: echo "Job started"
 
       - name: Long sleep
-        timeout-minutes: 1
+        timeout-minutes: 2
         run: sleep 360
 
       - name: End
