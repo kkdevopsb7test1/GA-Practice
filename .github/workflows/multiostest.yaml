@@ -1,0 +1,19 @@
+name: Multi-OS Test
+on:
+  workflow_dispatch:
+
+jobs:
+
+  ubuntu-job:
+    name: Run on Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print OS
+        run: echo "Running on Ubuntu"
+
+  windows-job:
+    name: Run on Windows
+    runs-on: windows-latest
+    steps:
+      - name: Print OS
+        run: echo "Running on Windows"
