@@ -1,7 +1,7 @@
 name: Full Deployment Pipeline
 
 on:
-  push:
+  workflow_dispatch:
 
 jobs:
 
