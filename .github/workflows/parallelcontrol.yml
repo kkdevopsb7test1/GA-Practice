@@ -7,9 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 2
-      fail-fast: true
+      fail-fast: false
       matrix:
         version: [1,2,3,4,5]
     steps:
 
       - run: echo "Version = ${{ matrix.version }}"
+
